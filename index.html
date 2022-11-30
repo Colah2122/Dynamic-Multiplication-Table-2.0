@@ -1,0 +1,53 @@
+<!--
+    File: index.html
+    Name: Chris Olah
+    Github Username: Colah2122
+    Email: christopher_olah@student.uml.edu
+    Date: 11/28/2022
+    File: index.html
+    Information: GUI Homework 4 Part 1. In this assignment the dynamic multiplication 
+        table will use jQuery to create the table based of user input while also
+        checking for errors and providng helpful error messages.  
+-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <title>Dynamic Table</title>
+     <link rel="stylesheet" href="css/index.css"> <!-- Incorporating css file-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+ </head>
+ <body>
+     <form id="user_Values">    <!-- Creating form to get user input -->
+         <table id="input_User">
+            <h2>Dynamic Multiplication Table</h2>
+             <tr>
+                 <td id="minimum_Column_Message">Minimum Column Value:</td>
+                 <td><input type="text" name="min_column" id="min_column" required></td>    <!-- Displaying minimum column value -->
+             </tr>
+             <tr>
+                 <td id="maximum_Column_Message">Maximum Column Value:</td>
+                 <td><input type="text" name="max_column" id="max_column" required></td>    <!-- Displaying maximum column value -->
+             </tr>
+
+             <tr>
+                 <td id="minimum_Row_Message">Minimum Row Value:</td>
+                 <td><input type="text" name="min_row" id="min_row" required></td>    <!-- Displaying minimum row value -->
+             </tr>
+             <tr>
+                 <td id="maximum_Row_Message">Maximum Row Value:</td>
+                 <td><input type="text" name="max_row" id="max_row" required></td>     <!-- Displaying maximum row value -->
+             </tr>
+             <tr>
+                <td id="makeTable" colspan="2">
+                    <button class="submit" type="submit">Create Table</button>
+                </td> <!-- Displaying submit button -->
+             </tr>
+         </table>
+     </form>
+     <div id="text"></div>
+     <div id="table"></div>
+     <script src="js/index.js"></script>    <!-- Incorporating javascript file-->
+ </body>
+</html>
